@@ -1,0 +1,14 @@
+ - Artes para o jogo / Sprites.
+ - Sistema de animacao para o player.
+ - Pause, Game Over e Start Menu.
+ - Controle do jogo pelo teclado.
+ - Sistem para shooting;
+ - Sistem para a criacao de mapa;
+ - Sistemas de v�rios levels;
+ - Inimigos no game;
+ - Boss Battle;
+ - Coletar items;
+ - Itens influenciam nos atributos do player;
+ - Sistem de dano;
+ - Sistema para salvar e carregar o jogo;
+ - Audio e musica(para o final);
