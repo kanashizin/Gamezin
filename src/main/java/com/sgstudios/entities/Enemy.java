@@ -19,7 +19,7 @@ public class Enemy extends Entity{
 	private int frames = 0, maxFrames = 12, index = 0, maxIndex = 2;
 	private BufferedImage[] sprites;
 	
-	private int life  = 10;
+	private int life  = 1;
 	private int counter = 0;
 	Random rand = new Random();
 	private boolean isDamaged = false;
@@ -195,14 +195,11 @@ public class Enemy extends Entity{
 				Game.entities.add(new Shield(this.getX(),this.getY(),16,16,rand.nextInt(100),Entity.SHIELD));
 			}else if( numRand >= 50 && numRand <= 75){
                             	
-                            Game.entities.add(new RingMana(this.getX(),this.getY(),10,6,rand.nextInt(100)*5,Entity.RINGMANA));
+                                Game.entities.add(new RingMana(this.getX(),this.getY(),10,6,rand.nextInt(100)*5,Entity.RINGMANA));
 			}else if( numRand >= 75 && numRand <= 100){
-                                if(rand.nextInt(2) == 1){
+                                
                                     Game.entities.add(new BootsComum(this.getX(), this.getY(),16,16,Entity.BOOTSCOMUM));
-                                }else {
-                                    
-                                    Game.entities.add(new BootsSpeed(this.getX(), this.getY(),16,16,rand.nextInt(20),Entity.BOOTSCOMUM));
-                                }
+                                
                         }
             
         }

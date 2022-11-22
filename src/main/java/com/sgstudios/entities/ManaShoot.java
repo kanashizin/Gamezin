@@ -7,6 +7,7 @@ import com.sgstudios.main.Game;
 import com.sgstudios.main.Sound;
 import com.sgstudios.world.Camera;
 import com.sgstudios.world.World;
+import java.awt.Color;
 
 public class ManaShoot extends Entity{
 
@@ -20,6 +21,29 @@ public class ManaShoot extends Entity{
 		this.dx = dx;
 		this.dy = dy;
 		this.powerCounter = powerCount;
+                
+                switch (powerCounter){
+                    
+                    case 2:
+                        
+                        this.setMask(0, 0, 10, 10);
+                        
+                        break;
+                    case 3:
+                        
+                        this.setMask(0, 0, 12, 12);
+                        
+                        break;
+                    case 4:
+                        
+                        this.setMask(0, 0, 16, 16);
+                        
+                        break;
+                    default:
+                        this.setMask(0,0,5,5);
+                        break;
+                    
+                }
 
 	}
 
@@ -27,7 +51,7 @@ public class ManaShoot extends Entity{
 		
 		flying();
 
-		inScreen();
+		isAlive();
 	}
 	
 	public void flying() {
@@ -40,9 +64,9 @@ public class ManaShoot extends Entity{
 			
 	}
 	
-	public void inScreen() {
+	public void isAlive() {
 		
-			if(!World.isOutWall(this.getX(), this.getY())) {
+			if(!World.isWall(this.getX(), this.getY()) || !World.isOutWall(this.getX(), this.getY())) {
 				counter = 0;
 				Sound.explosion.play();
 				Game.playerAtual.shoot = false;
@@ -59,7 +83,8 @@ public class ManaShoot extends Entity{
 	
 	public void render(Graphics g) {
 		
-		
+                
+            
 		switch (powerCounter){
 			
 		case 2:
@@ -76,8 +101,6 @@ public class ManaShoot extends Entity{
 			break;
 		
 		}
-		
-		
 		
 
 		

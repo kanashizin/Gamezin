@@ -180,21 +180,21 @@ public class PersonalTab {
 			
 			if(items[0+(1*2)] instanceof RingManaItem) {
 				
-				g.drawImage(Entity.RINGMANA, (BACK_X+(BACK_WIDTH/2))-192, (80*(1+1)), 64, 64, null);
+				g.drawImage(Entity.RINGMANA, (BACK_X+(BACK_WIDTH/2))-188, (80*(1+1))+4, 60, 60, null);
 				
 			}
 			if(items[4+(1*2)] instanceof RingManaItem){
 				
-				g.drawImage(Entity.RINGMANA, (BACK_X+(BACK_WIDTH/2))+128, (80*(1+1)), 64, 64, null);
+				g.drawImage(Entity.RINGMANA, (BACK_X+(BACK_WIDTH/2))+128, (80*(1+1))+4, 60, 60, null);
 				
 			}
 			if(items[2+(1*2)] instanceof ShieldItem) {
 				
-				g.drawImage(Entity.SHIELD, (BACK_X+(BACK_WIDTH/2))-32, (80*(1+1)), 64, 64, null);
+				g.drawImage(Entity.SHIELD, (BACK_X+(BACK_WIDTH/2))-28, (80*(1+1))+4, 60, 60, null);
 				
 			}
 			if(items[2+(2*2)] instanceof BootsComumItem){
-                            g.drawImage(Entity.BOOTSCOMUM, (BACK_X+(BACK_WIDTH/2))-32, (80*(2+1)), 64, 64, null);
+                            g.drawImage(Entity.BOOTSCOMUM, (BACK_X+(BACK_WIDTH/2))-32, (80*(2+1)), 60, 60, null);
                         }
 				
 				
